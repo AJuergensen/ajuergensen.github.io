@@ -3,29 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
 import photo from '../assets/photo.jpg'
-
-const emails = ['a.jurgensen@imperial.ac.uk', 'amj70@cam.ac.uk']
-
-const socials = [
-  {
-    name: 'BlueSky',
-    href: 'https://bsky.app/profile/did:plc:pcosszf7nw7ryzcskkgiw2lx',
-    icon: 'simple-icons:bluesky',
-    color: '#2e8afc',
-  },
-  {
-    name: 'ORCID',
-    href: 'https://orcid.org/0000-0002-7871-1887',
-    icon: 'simple-icons:orcid',
-    color: '#a8ce45',
-  },
-  {
-    name: 'Google Scholar',
-    href: 'https://scholar.google.com/citations?hl=en&user=5or7uvAAAAAJ',
-    icon: 'simple-icons:googlescholar',
-    color: '#7aa6f6',
-  },
-]
+import { emails, socials } from '../data'
 ---
 
 <Layout>

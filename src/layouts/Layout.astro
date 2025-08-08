@@ -5,11 +5,7 @@ import { Icon } from 'astro-icon/components'
 import { SEO } from 'astro-seo'
 import { ClientRouter } from 'astro:transitions'
 import BG from '../components/BG.astro'
-
-const title = 'Anna-Maria Jürgensen'
-const description = 'My page description'
-
-const { url, site } = Astro
+import { title, description } from '../data'
 
 const nav = [
   { name: 'About', href: '/' },
@@ -20,6 +16,8 @@ const nav = [
     external: true,
   },
 ]
+
+const { url, site } = Astro
 ---
 
 <!doctype html>
