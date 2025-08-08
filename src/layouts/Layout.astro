@@ -1,0 +1,87 @@
+---
+import '../main.css'
+import '@fontsource-variable/montserrat'
+import { Icon } from 'astro-icon/components'
+import { SEO } from 'astro-seo'
+import { ClientRouter } from 'astro:transitions'
+import BG from '../components/BG.astro'
+
+const title = 'Anna-Maria Jürgensen'
+const description = 'My page description'
+
+const { url, site } = Astro
+
+const nav = [
+  { name: 'About', href: '/' },
+  { name: 'CV', href: '/cv' },
+  {
+    name: 'Publications',
+    href: 'https://scholar.google.com/citations?hl=en&user=5or7uvAAAAAJ',
+    external: true,
+  },
+]
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <SEO
+      title={title}
+      description={description}
+      extend={{
+        link: [
+          { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
+          { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+        ],
+      }}
+      openGraph={{
+        basic: {
+          title: title,
+          type: 'website',
+          image: `${site}/og-image.png`,
+          url: url,
+        },
+        optional: {
+          description: description,
+        },
+      }}
+    />
+    <ClientRouter />
+  </head>
+  <body
+    class="overflow-y-scroll bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100"
+  >
+    <BG transition:persist />
+    <div
+      class="mx-auto flex min-h-dvh max-w-6xl flex-col gap-12 p-4 pb-8 md:p-8 md:pb-16"
+    >
+      <nav class="flex justify-center gap-8 text-lg uppercase lg:justify-end">
+        {
+          nav.map((item) => (
+            <a
+              href={item.href}
+              data-current={url.pathname === item.href ? true : undefined}
+              class="group flex items-center gap-2"
+            >
+              <span class="relative outline-offset-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-current/70 after:transition-transform group-hover:after:origin-bottom-left group-hover:after:scale-x-100 group-data-[current]:after:scale-x-100">
+                {item.name}
+              </span>
+              {item.external && (
+                <Icon
+                  name="heroicons:arrow-up-right-solid"
+                  class="size-3 text-current/75"
+                />
+              )}
+            </a>
+          ))
+        }
+      </nav>
+      <slot />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Montserrat Variable', 'sans-serif';
+}
+
+.has-tooltip {
+  @apply relative;
+}
+
+.tooltip {
+  @apply invisible absolute bottom-full left-1/2 w-max -translate-x-1/2 rounded-full bg-gray-900 px-2 py-1 text-sm font-semibold text-white opacity-0 transition dark:bg-gray-100 dark:text-black;
+}
+
+.has-tooltip:hover .tooltip,
+.has-tooltip:focus .tooltip {
+  @apply visible z-50 -translate-y-2 opacity-100;
+}

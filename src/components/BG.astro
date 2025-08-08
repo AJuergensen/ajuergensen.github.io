@@ -1,0 +1,74 @@
+<canvas class="fixed -z-10"></canvas>
+
+<script>
+  import { createNoise3D } from 'simplex-noise'
+
+  const query = window.matchMedia('(prefers-color-scheme: dark)')
+  let isDarkMode = query.matches
+  query.addEventListener('change', (event) => (isDarkMode = event.matches))
+
+  const resolution = 15
+  const noiseResolution = 0.02
+  const noiseSpeed = 0.1
+  const color = (value: number) =>
+    isDarkMode
+      ? `rgba(255, 255, 255, ${value * 0.15})`
+      : `rgba(0, 0, 0, ${value * 0.15})`
+  const size = (value: number) => value * 3
+
+  let canvas: HTMLCanvasElement
+  let context: CanvasRenderingContext2D
+  let width: number, height: number
+  let last: number
+  let cols: number, rows: number
+  const noise = createNoise3D()
+
+  function resize() {
+    width = window.innerWidth
+    height = window.innerHeight
+    canvas.width = width
+    canvas.height = height
+    cols = Math.ceil(width / resolution)
+    rows = Math.ceil(height / resolution)
+  }
+
+  function render(now: number) {
+    const deltaT = now - (last || now)
+    last = now
+    window.requestAnimationFrame(render)
+
+    if (deltaT > 100) {
+      return
+    }
+
+    context.clearRect(0, 0, width, height)
+    for (let y = 0; y < rows; y++) {
+      for (let x = 0; x < cols; x++) {
+        const value = noise(
+          x * noiseResolution,
+          y * noiseResolution,
+          now * 0.001 * noiseSpeed,
+        )
+        const normalizedValue = (value + 1) / 2
+        context.fillStyle = color(normalizedValue)
+        context.beginPath()
+        context.arc(
+          (x + 0.5) * resolution,
+          (y + 0.5) * resolution,
+          size(normalizedValue) / 2,
+          0,
+          2 * Math.PI,
+        )
+        context.fill()
+      }
+    }
+  }
+
+  window.addEventListener('resize', resize)
+  document.addEventListener('astro:page-load', () => {
+    canvas = document.querySelector('canvas')!
+    context = canvas.getContext('2d')!
+    resize()
+    window.requestAnimationFrame(render)
+  })
+</script>

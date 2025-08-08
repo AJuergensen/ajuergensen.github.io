@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import photo from '../assets/photo.jpg'
+
+const emails = ['a.jurgensen@imperial.ac.uk', 'amj70@cam.ac.uk']
+
+const socials = [
+  {
+    name: 'BlueSky',
+    href: 'https://bsky.app/profile/did:plc:pcosszf7nw7ryzcskkgiw2lx',
+    icon: 'simple-icons:bluesky',
+    color: '#2e8afc',
+  },
+  {
+    name: 'ORCID',
+    href: 'https://orcid.org/0000-0002-7871-1887',
+    icon: 'simple-icons:orcid',
+    color: '#a8ce45',
+  },
+  {
+    name: 'Google Scholar',
+    href: 'https://scholar.google.com/citations?hl=en&user=5or7uvAAAAAJ',
+    icon: 'simple-icons:googlescholar',
+    color: '#7aa6f6',
+  },
+]
+---
+
+<Layout>
+  <div class="flex flex-1 flex-col items-center gap-8 lg:flex-row">
+    <Image
+      src={photo}
+      alt="Anna-Maria Jürgensen"
+      loading="eager"
+      class="w-64 shrink-0 rounded-full border-4 border-white shadow-xl select-none md:w-80"
+    />
+    <div class="space-y-12">
+      <div class="justify-self-center lg:justify-self-start">
+        <h1 class="text-xl font-semibold md:text-2xl">
+          Anna-Maria Jürgensen<span class="font-light text-current/30"
+            >, PhD</span
+          >
+        </h1>
+        <p class="text-lg text-current/50 md:text-xl">
+          Computational neuroscientist
+        </p>
+        <p class="mt-4 text-xl text-balance text-current/40 md:text-2xl">
+          Learning & memory
+        </p>
+      </div>
+      <div class="space-y-4 md:text-lg">
+        <p>
+          Computational neuroscientist with roots in Psychology, currently based
+          in London. I work in <a
+            href="https://cclopath.bg-research.cc.ic.ac.uk"
+            class="underline decoration-blue-500/30 decoration-2 underline-offset-4 transition-colors hover:decoration-blue-500"
+            >Claudia Clopath</a
+          >’s lab at Imperial College and <a
+            href="https://www2.mrc-lmb.cam.ac.uk/group-leaders/t-to-z/marta-zlatic/"
+            class="underline decoration-blue-500/30 decoration-2 underline-offset-4 transition-colors hover:decoration-blue-500"
+            >Marta Zlatic</a
+          > at the MRC-LMB in Cambridge.
+        </p>
+        <p>
+          My research focuses on the circuit-level mechanisms of learning and
+          memory in the insect mushroom body — a central brain structure for
+          sensory integration, learning and the control of learned behaviour.
+        </p>
+        <p>
+          Current projects investigate how reinforcement is distributed across
+          dopaminergic neurons in the mushroom body, and how the individual
+          neurons contribute to learning through distinct, parallel learning
+          rules. I am particularly interested in mechanisms of credit
+          assignment, reinforcement prediction, and how multiple memories are
+          maintained in parallel and integrated to guide behaviour.
+        </p>
+        <p>If you are interested to chat, please reach out.</p>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8"
+      >
+        <div class="flex flex-col items-start gap-2">
+          {
+            emails.map((email) => (
+              <a
+                href={`mailto:${email}`}
+                class="group flex items-center gap-2 text-sm"
+              >
+                <Icon
+                  name="heroicons:envelope-solid"
+                  class="size-6 text-current/30 transition group-hover:scale-110 group-hover:text-current/70"
+                />
+                <span class="relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-current/50 after:transition-transform group-hover:after:origin-bottom-left group-hover:after:scale-x-100">
+                  {email}
+                </span>
+              </a>
+            ))
+          }
+        </div>
+        <span
+          class="h-0.5 w-12 rounded-full bg-current opacity-10 md:h-12 md:w-0.5"
+        ></span>
+        <div
+          class="col-start-[content-start] col-end-[content-end] flex justify-center gap-8"
+        >
+          {
+            socials.map((link) => (
+              <a
+                href={link.href}
+                style={{ '--color': link.color }}
+                class="has-tooltip group outline-none"
+                aria-label={link.name}
+              >
+                <Icon
+                  name={link.icon}
+                  class={`size-8 text-current/50 transition group-hover:scale-110 group-hover:text-(--color) group-focus:scale-110 group-focus:text-(--color)`}
+                />
+                <span class="tooltip">{link.name}</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
