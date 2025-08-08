@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://anna.nikolasdas.de',
+  site: 'https://ajuergensen.github.io',
   trailingSlash: 'never',
   integrations: [icon()],
   vite: {
