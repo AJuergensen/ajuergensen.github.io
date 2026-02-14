@@ -56,12 +56,18 @@ export const educations = [
 export const researchExperiences = [
   {
     period: '06/2025 - present',
-    position: 'Research Associate',
+    position: 'Marie Skłodowska-Curie Postdoctoral Fellow',
     details:
       'Department of Physiology, Development and Neuroscience (Marta Zlatic & Albert Cardona), University of Cambridge',
   },
   {
-    period: '04/2025 - present',
+    period: '06/2025 - present',
+    position: 'Visiting Researcher',
+    details:
+      'Computational Neuroscience Laboratory (Claudia Clopath), Bioengineering, Imperial College London',
+  },
+  {
+    period: '04/2025 - 06/2025',
     position: 'Research Associate',
     details:
       'Computational Neuroscience Laboratory (Claudia Clopath), Bioengineering, Imperial College London',
