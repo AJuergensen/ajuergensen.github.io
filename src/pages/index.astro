@@ -33,15 +33,15 @@ import { emails, socials } from '../data'
           Computational neuroscientist with roots in Psychology, currently based
           in London. I work in <a
             href="https://cclopath.bg-research.cc.ic.ac.uk"
-            class="underline decoration-blue-500/30 decoration-2 underline-offset-4 transition-colors hover:decoration-blue-500"
+            class="underline decoration-blue-500/40 decoration-2 underline-offset-4 transition-colors hover:decoration-blue-500"
             >Claudia Clopath</a
           >’s lab at Imperial College and <a
             href="https://www2.mrc-lmb.cam.ac.uk/group-leaders/t-to-z/marta-zlatic/"
-            class="underline decoration-blue-500/30 decoration-2 underline-offset-4 transition-colors hover:decoration-blue-500"
+            class="underline decoration-blue-500/40 decoration-2 underline-offset-4 transition-colors hover:decoration-blue-500"
             >Marta Zlatic</a
           > and <a
             href="https://www2.mrc-lmb.cam.ac.uk/group-leaders/a-to-g/albert-cardona/"
-            class="underline decoration-blue-500/30 decoration-2 underline-offset-4 transition-colors hover:decoration-blue-500"
+            class="underline decoration-blue-500/40 decoration-2 underline-offset-4 transition-colors hover:decoration-blue-500"
             >Albert Cardona</a
           > at the MRC-LMB and University of Cambridge.
         </p>
@@ -72,9 +72,9 @@ import { emails, socials } from '../data'
               >
                 <Icon
                   name="heroicons:envelope-solid"
-                  class="size-6 text-current/30 transition group-hover:scale-110 group-hover:text-current/70"
+                  class="size-6 text-current/30 transition group-hover:text-current/70"
                 />
-                <span class="relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-current/50 after:transition-transform group-hover:after:origin-bottom-left group-hover:after:scale-x-100">
+                <span class="relative after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-blue-500/70 after:transition-transform group-hover:after:origin-bottom-left group-hover:after:scale-x-100">
                   {email}
                 </span>
               </a>
@@ -97,9 +97,9 @@ import { emails, socials } from '../data'
               >
                 <Icon
                   name={link.icon}
-                  class={`size-8 text-current/50 transition group-hover:scale-110 group-hover:text-(--color) group-focus:scale-110 group-focus:text-(--color)`}
+                  class="size-8 text-current/50 transition group-hover:scale-110 group-hover:text-(--color) group-focus:scale-110 group-focus:text-(--color)"
                 />
-                <span class="tooltip">{link.name}</span>
+                <span class="tooltip pointer-events-none">{link.name}</span>
               </a>
             ))
           }

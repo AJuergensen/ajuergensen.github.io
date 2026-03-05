@@ -13,7 +13,6 @@ const nav = [
   {
     name: 'Publications',
     href: 'https://scholar.google.com/citations?hl=en&user=5or7uvAAAAAJ',
-    external: true,
   },
 ]
 
@@ -66,10 +65,10 @@ const { url, site } = Astro
               data-current={url.pathname === item.href ? true : undefined}
               class="group flex items-center gap-2"
             >
-              <span class="relative outline-offset-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-current/70 after:transition-transform group-hover:after:origin-bottom-left group-hover:after:scale-x-100 group-data-[current]:after:scale-x-100">
+              <span class="relative outline-offset-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-blue-500/70 after:transition-transform group-hover:after:origin-bottom-left group-hover:after:scale-x-100 group-data-current:after:scale-x-100">
                 {item.name}
               </span>
-              {item.external && (
+              {item.href.startsWith('http') && (
                 <Icon
                   name="heroicons:arrow-up-right-solid"
                   class="size-3 text-current/75"
