@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  astro:
-    hash: 2748f61bbacd0e1f73c8c0fbc241a26beaaa5bfb9993b06f9621353409b91221
-    path: patches/astro.patch
-
 importers:
 
   .:
@@ -30,7 +25,7 @@ importers:
         version: 1.0.0-beta.20
       astro:
         specifier: ^6.0.8
-        version: 6.0.8(patch_hash=2748f61bbacd0e1f73c8c0fbc241a26beaaa5bfb9993b06f9621353409b91221)(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.52.5)(typescript@6.0.2)(yaml@2.8.3)
+        version: 6.0.8(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.52.5)(typescript@6.0.2)(yaml@2.8.3)
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5
@@ -4228,7 +4223,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@6.0.8(patch_hash=2748f61bbacd0e1f73c8c0fbc241a26beaaa5bfb9993b06f9621353409b91221)(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.52.5)(typescript@6.0.2)(yaml@2.8.3):
+  astro@6.0.8(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.52.5)(typescript@6.0.2)(yaml@2.8.3):
     dependencies:
       '@astrojs/compiler': 3.0.1
       '@astrojs/internal-helpers': 0.8.0
