@@ -1,6 +1,6 @@
 ---
 import '../main.css'
-import '@fontsource-variable/montserrat'
+import { Font } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
 import { SEO } from 'astro-seo'
 import { ClientRouter } from 'astro:transitions'
@@ -27,6 +27,7 @@ const { url, site } = Astro
       name="viewport"
       content="width=device-width"
     />
+    <Font cssVariable="--font-montserrat" />
     <SEO
       title={title}
       description={description}

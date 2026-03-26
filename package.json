@@ -3,41 +3,41 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@10.33.0",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "check": "astro check",
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@fontsource-variable/montserrat": "^5.2.8",
+    "@astrojs/check": "^0.9.8",
     "@fontsource/montserrat": "^5.2.8",
-    "@tailwindcss/vite": "^4.2.1",
-    "astro": "^5.18.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "@takumi-rs/core": "1.0.0-beta.20",
+    "@takumi-rs/image-response": "1.0.0-beta.20",
+    "astro": "^6.0.8",
     "astro-icon": "^1.1.5",
     "astro-seo": "^1.1.0",
+    "react": "^19.2.4",
     "simplex-noise": "^4.0.3",
-    "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.72",
-    "@resvg/resvg-js": "^2.6.2",
-    "@typescript-eslint/parser": "^8.56.1",
-    "eslint": "^10.0.2",
+    "@iconify-json/simple-icons": "^1.2.75",
+    "@types/react": "^19.2.14",
+    "@typescript-eslint/parser": "^8.57.2",
+    "eslint": "^10.1.0",
     "eslint-plugin-astro": "^1.6.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "satori": "^0.25.0",
-    "sharp": "^0.34.5"
+    "prettier-plugin-tailwindcss": "^0.7.2"
   }
 }
