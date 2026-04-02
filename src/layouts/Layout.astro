@@ -1,11 +1,11 @@
 ---
-import '../main.css'
 import { Font } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
 import { SEO } from 'astro-seo'
 import { ClientRouter } from 'astro:transitions'
 import BG from '../components/BG.astro'
 import { title, description } from '../data'
+import '../main.css'
 
 const nav = [
   { name: 'About', href: '/' },
@@ -22,13 +22,12 @@ const { url, site } = Astro
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width"
     />
-    <Font cssVariable="--font-montserrat" />
     <SEO
+      charset="utf-8"
       title={title}
       description={description}
       extend={{
@@ -36,6 +35,7 @@ const { url, site } = Astro
           { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
           { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
         ],
+        meta: [{ name: 'viewport', content: 'width=device-width' }],
       }}
       openGraph={{
         basic: {
@@ -49,6 +49,7 @@ const { url, site } = Astro
         },
       }}
     />
+    <Font cssVariable="--font-montserrat" />
     <ClientRouter />
   </head>
   <body

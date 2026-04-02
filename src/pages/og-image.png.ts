@@ -1,9 +1,10 @@
-import { fontData } from 'astro:assets'
 import { readFile } from 'node:fs/promises'
+import { fontData } from 'astro:assets'
+import { outDir } from 'astro:config/server'
 import type { APIRoute } from 'astro'
 import { ImageResponse } from '@takumi-rs/image-response'
 import type { FontDetails } from '@takumi-rs/core'
-import { outDir } from 'astro:config/server'
+
 import ogImage from '../og-image'
 
 export const GET: APIRoute = async (context) => {
