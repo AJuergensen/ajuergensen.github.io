@@ -1,6 +1,4 @@
-import { readFile } from 'node:fs/promises'
-import { fontData } from 'astro:assets'
-import { outDir } from 'astro:config/server'
+import { fontData, experimental_getFontFileURL } from 'astro:assets'
 import type { APIRoute } from 'astro'
 import { ImageResponse } from '@takumi-rs/image-response'
 import type { FontDetails } from '@takumi-rs/core'
@@ -13,11 +11,9 @@ export const GET: APIRoute = async (context) => {
       name: 'Montserrat',
       weight: Number(font.weight),
       style: font.style as any,
-      data: import.meta.env.DEV
-        ? await fetch(new URL(font.src[0]!.url, context.url.origin)).then(
-            (res) => res.arrayBuffer(),
-          )
-        : await readFile(new URL(`.${font.src[0]!.url}`, outDir)),
+      data: await fetch(
+        experimental_getFontFileURL(font.src[0]!.url, context.url),
+      ).then((res) => res.arrayBuffer()),
     })),
   )
 
