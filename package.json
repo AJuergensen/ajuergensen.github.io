@@ -24,6 +24,7 @@
     "astro-icon": "^1.1.5",
     "astro-seo": "^1.1.0",
     "react": "^19.2.6",
+    "sharp": "^0.34.5",
     "simplex-noise": "^4.0.3",
     "tailwindcss": "^4.3.0"
   },
