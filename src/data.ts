@@ -165,84 +165,6 @@ export const journalArticles = [
   },
 ]
 
-export const conferencePosters = [
-  {
-    conference: 'NWG 2025',
-    authors:
-      'Anna-Maria Jürgensen, Denise Weber, Thum Andreas, and Martin P. Nawrot',
-    title:
-      'Distributed reinforcement signals among drosophila larva dopaminergic neurons guide learning in individual mushroom body compartments',
-  },
-  {
-    conference: 'FENS 2024',
-    authors:
-      'Anna-Maria Jürgensen, Panagiotis Sakagiannis, Felix J. Schmitt, Michael Schleyer, Bertram Gerber, and Martin P. Nawrot',
-    title:
-      'Circuit motifs for learning with reinforcement prediction in the drosophila mushroom body',
-  },
-  {
-    conference: 'BonnBrain 2024',
-    authors:
-      'Anna-Maria Jürgensen, Panagiotis Sakagiannis, Felix J. Schmitt, Michael Schleyer, Bertram Gerber, and Martin P. Nawrot',
-    title:
-      'Circuit motifs for sensory integration, learning, and the initiation of adaptive behavior in larval drosophila',
-  },
-  {
-    conference: 'Champalimaud Neuroscience Symposium 2023',
-    authors: 'Anna-Maria Jürgensen, Felix J. Schmitt, and Martin P. Nawrot',
-    title:
-      'Minimal circuit motifs for second order conditioning in the insect mushroom body',
-  },
-  {
-    conference: 'Bernstein Conference 2022',
-    authors:
-      'Anna-Maria Jürgensen, Panagiotis Sakagiannis, Michael Schleyer, Bertram Gerber, and Martin P. Nawrot',
-    title:
-      'Prediction error drives associative olfactory learning and conditioned behavior in a spiking model of drosophila larva',
-  },
-  {
-    conference: 'Areadne Conference 2022',
-    authors:
-      'Anna-Maria Jürgensen, Panagiotis Sakagiannis, Michael Schleyer, Bertram Gerber, and Martin P. Nawrot',
-    title:
-      'Modeling continous learning and adaptive behavior in drosophila larva',
-  },
-  {
-    conference: 'NWG 2019',
-    authors:
-      'Anna-Maria Jürgensen, Michael Schleyer, Bertram Gerber, and Martin P. Nawrot',
-    title:
-      'Olfactory learning in drosophila larva can be accounted for by plasticity of the synapses between Kenyon cells and mushroom body output neurons',
-  },
-  {
-    conference: 'CNS 2019',
-    authors: 'Anna-Maria Jürgensen, Afshin Khalili, and Martin P. Nawrot',
-    title:
-      'Reinforcement-mediated plasticity in a spiking model of the drosophila larva olfactory system',
-  },
-  {
-    conference: 'Bernstein Conference 2019',
-    authors:
-      'Anna-Maria Jürgensen, Michael Schleyer, Bertram Gerber, and Martin P. Nawrot',
-    title:
-      'Reinforcement-mediated plasticity in a spiking model of the drosophila larva olfactory system',
-  },
-  {
-    conference: 'Symposium Neurowissenschaften Köln 2018',
-    authors:
-      'Anna-Maria Jürgensen, Hannes Rapp, Rinaldo Betkiewicz, and Martin P. Nawrot',
-    title:
-      'From dense to sparse coding in a spiking model of the drosophila larva olfactory system',
-  },
-  {
-    conference: 'Bernstein Conference 2018',
-    authors:
-      'Anna-Maria Jürgensen, Hannes Rapp, Rinaldo Betkiewicz, and Martin P. Nawrot',
-    title:
-      'From dense to sparse coding in a spiking model of the drosophila larva olfactory system',
-  },
-]
-
 export const invitedTalks = [
   {
     year: 2023,
@@ -284,5 +206,17 @@ export const awardsAndFunding = [
   {
     year: '2015',
     title: 'Erasmus+, European Union',
+  },
+]
+
+export const additionalContributions = [
+  {
+    year: '2026',
+    title:
+      'Organizer Bernstein Conference workshop, Frankfurt, Germany, Shaping plasticity: Structural constraints and temporal dynamics in learning.',
+  },
+  {
+    year: '2020',
+    title: 'Co-organizer of Neuro DoWo Conference, Cologne, Germany, Cancelled due to Covid-19.',
   },
 ]

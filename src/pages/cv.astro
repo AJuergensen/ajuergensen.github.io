@@ -4,9 +4,9 @@ import {
   educations,
   researchExperiences,
   journalArticles,
-  conferencePosters,
   invitedTalks,
   awardsAndFunding,
+  additionalContributions,
 } from '../data'
 ---
 
@@ -17,13 +17,13 @@ import {
         Education
       </h2>
       <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-        {educations.map((education) => (
+        {educations.map((item) => (
           <>
-            <p class="text-current/50 tabular-nums">{education.period}</p>
+            <p class="text-current/50 tabular-nums">{item.period}</p>
             <div>
-              <p class="font-semibold">{education.degree}</p>
-              <p>{education.institution}</p>
-              {education.details.map((detail) => (
+              <p class="font-semibold">{item.degree}</p>
+              <p>{item.institution}</p>
+              {item.details.map((detail) => (
                 <p class="text-sm">{detail}</p>
               ))}
             </div>
@@ -36,12 +36,12 @@ import {
         Research Experience
       </h2>
       <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-        {researchExperiences.map((experience) => (
+        {researchExperiences.map((item) => (
           <>
-            <p class="text-current/50 tabular-nums">{experience.period}</p>
+            <p class="text-current/50 tabular-nums">{item.period}</p>
             <div>
-              <p class="font-semibold">{experience.position}</p>
-              <p>{experience.details}</p>
+              <p class="font-semibold">{item.position}</p>
+              <p>{item.details}</p>
             </div>
           </>
         ))}
@@ -54,27 +54,13 @@ import {
       <div>
         <h3 class="mb-4 text-xl font-semibold">Journal Articles</h3>
         <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-          {journalArticles.map((article) => (
+          {journalArticles.map((item) => (
             <>
-              <p class="text-current/50 tabular-nums">{article.year}</p>
+              <p class="text-current/50 tabular-nums">{item.year}</p>
               <div>
-                <p class="text-sm text-current/60">{article.authors}</p>
-                <p>{article.title}</p>
-                <p class="text-sm text-current/60">{article.details}</p>
-              </div>
-            </>
-          ))}
-        </div>
-      </div>
-      <div>
-        <h3 class="mb-4 text-xl font-semibold">Conference Poster</h3>
-        <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-          {conferencePosters.map((poster) => (
-            <>
-              <p class="text-current/50 tabular-nums">{poster.conference}</p>
-              <div>
-                <p class="text-sm text-current/60">{poster.authors}</p>
-                <p>{poster.title}</p>
+                <p class="text-sm text-current/60">{item.authors}</p>
+                <p>{item.title}</p>
+                <p class="text-sm text-current/60">{item.details}</p>
               </div>
             </>
           ))}
@@ -86,12 +72,12 @@ import {
         Invited Talks
       </h2>
       <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-        {invitedTalks.map((talk) => (
+        {invitedTalks.map((item) => (
           <>
-            <p class="text-current/50 tabular-nums">{talk.year}</p>
+            <p class="text-current/50 tabular-nums">{item.year}</p>
             <div>
-              <p>{talk.title}</p>
-              <p class="text-sm text-current/60">{talk.location}</p>
+              <p>{item.title}</p>
+              <p class="text-sm text-current/60">{item.location}</p>
             </div>
           </>
         ))}
@@ -102,11 +88,26 @@ import {
         Awards & Funding
       </h2>
       <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-        {awardsAndFunding.map((award) => (
+        {awardsAndFunding.map((item) => (
           <>
-            <p class="text-current/50 tabular-nums">{award.year}</p>
+            <p class="text-current/50 tabular-nums">{item.year}</p>
             <div>
-              <p>{award.title}</p>
+              <p>{item.title}</p>
+            </div>
+          </>
+        ))}
+      </div>
+    </div>
+    <div class="space-y-8">
+      <h2 class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20">
+        Additional Contributions
+      </h2>
+      <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
+        {additionalContributions.map((item) => (
+          <>
+            <p class="text-current/50 tabular-nums">{item.year}</p>
+            <div>
+              <p>{item.title}</p>
             </div>
           </>
         ))}
