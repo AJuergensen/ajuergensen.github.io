@@ -114,7 +114,7 @@ export const researchExperiences = [
   },
 ]
 
-export const journalArticles = [
+export const publications = [
   {
     year: 2025,
     authors:
@@ -217,6 +217,7 @@ export const additionalContributions = [
   },
   {
     year: '2020',
-    title: 'Co-organizer of Neuro DoWo Conference, Cologne, Germany, Cancelled due to Covid-19.',
+    title:
+      'Co-organizer of Neuro DoWo Conference, Cologne, Germany, Cancelled due to Covid-19.',
   },
 ]

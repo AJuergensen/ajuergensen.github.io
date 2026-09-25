@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import {
   educations,
   researchExperiences,
-  journalArticles,
+  publications,
   invitedTalks,
   awardsAndFunding,
   additionalContributions,
@@ -51,20 +51,17 @@ import {
       <h2 class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20">
         Publications
       </h2>
-      <div>
-        <h3 class="mb-4 text-xl font-semibold">Journal Articles</h3>
-        <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-          {journalArticles.map((item) => (
-            <>
-              <p class="text-current/50 tabular-nums">{item.year}</p>
-              <div>
-                <p class="text-sm text-current/60">{item.authors}</p>
-                <p>{item.title}</p>
-                <p class="text-sm text-current/60">{item.details}</p>
-              </div>
-            </>
-          ))}
-        </div>
+      <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
+        {publications.map((item) => (
+          <>
+            <p class="text-current/50 tabular-nums">{item.year}</p>
+            <div>
+              <p class="text-sm text-current/60">{item.authors}</p>
+              <p>{item.title}</p>
+              <p class="text-sm text-current/60">{item.details}</p>
+            </div>
+          </>
+        ))}
       </div>
     </div>
     <div class="space-y-8">
