@@ -48,33 +48,27 @@ const { url, site } = Astro
     <Font cssVariable="--font-montserrat" />
     <ClientRouter />
   </head>
-  <body
-    class="overflow-y-scroll bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100"
-  >
+  <body class="overflow-y-scroll bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
     <BG transition:persist />
-    <div
-      class="mx-auto flex min-h-dvh max-w-6xl flex-col gap-12 p-4 pb-8 md:p-8 md:pb-16"
-    >
+    <div class="mx-auto flex min-h-dvh max-w-6xl flex-col gap-12 p-4 pb-8 md:p-8 md:pb-16">
       <nav class="flex justify-center gap-8 text-lg uppercase lg:justify-end">
-        {
-          nav.map((item) => (
-            <a
-              href={item.href}
-              data-current={url.pathname === item.href ? true : undefined}
-              class="group flex items-center gap-2"
-            >
-              <span class="relative outline-offset-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-blue-500/70 after:transition-transform group-hover:after:origin-bottom-left group-hover:after:scale-x-100 group-data-current:after:scale-x-100">
-                {item.name}
-              </span>
-              {item.href.startsWith('http') && (
-                <Icon
-                  name="heroicons:arrow-up-right-solid"
-                  class="size-3 text-current/75"
-                />
-              )}
-            </a>
-          ))
-        }
+        {nav.map((item) => (
+          <a
+            href={item.href}
+            data-current={url.pathname === item.href ? true : undefined}
+            class="group flex items-center gap-2"
+          >
+            <span class="relative outline-offset-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-blue-500/70 after:transition-transform group-hover:after:origin-bottom-left group-hover:after:scale-x-100 group-data-current:after:scale-x-100">
+              {item.name}
+            </span>
+            {item.href.startsWith('http') && (
+              <Icon
+                name="heroicons:arrow-up-right-solid"
+                class="size-3 text-current/75"
+              />
+            )}
+          </a>
+        ))}
       </nav>
       <slot />
     </div>

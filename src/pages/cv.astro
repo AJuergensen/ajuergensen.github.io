@@ -13,125 +13,103 @@ import {
 <Layout>
   <div class="space-y-16">
     <div class="space-y-8">
-      <h2
-        class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20"
-      >
+      <h2 class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20">
         Education
       </h2>
       <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-        {
-          educations.map((education) => (
-            <>
-              <p class="text-current/50 tabular-nums">{education.period}</p>
-              <div>
-                <p class="font-semibold">{education.degree}</p>
-                <p>{education.institution}</p>
-                {education.details.map((detail) => (
-                  <p class="text-sm">{detail}</p>
-                ))}
-              </div>
-            </>
-          ))
-        }
+        {educations.map((education) => (
+          <>
+            <p class="text-current/50 tabular-nums">{education.period}</p>
+            <div>
+              <p class="font-semibold">{education.degree}</p>
+              <p>{education.institution}</p>
+              {education.details.map((detail) => (
+                <p class="text-sm">{detail}</p>
+              ))}
+            </div>
+          </>
+        ))}
       </div>
     </div>
     <div class="space-y-8">
-      <h2
-        class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20"
-      >
+      <h2 class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20">
         Research Experience
       </h2>
       <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-        {
-          researchExperiences.map((experience) => (
-            <>
-              <p class="text-current/50 tabular-nums">{experience.period}</p>
-              <div>
-                <p class="font-semibold">{experience.position}</p>
-                <p>{experience.details}</p>
-              </div>
-            </>
-          ))
-        }
+        {researchExperiences.map((experience) => (
+          <>
+            <p class="text-current/50 tabular-nums">{experience.period}</p>
+            <div>
+              <p class="font-semibold">{experience.position}</p>
+              <p>{experience.details}</p>
+            </div>
+          </>
+        ))}
       </div>
     </div>
     <div class="space-y-8">
-      <h2
-        class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20"
-      >
+      <h2 class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20">
         Publications
       </h2>
       <div>
         <h3 class="mb-4 text-xl font-semibold">Journal Articles</h3>
         <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-          {
-            journalArticles.map((article) => (
-              <>
-                <p class="text-current/50 tabular-nums">{article.year}</p>
-                <div>
-                  <p class="text-sm text-current/60">{article.authors}</p>
-                  <p>{article.title}</p>
-                  <p class="text-sm text-current/60">{article.details}</p>
-                </div>
-              </>
-            ))
-          }
+          {journalArticles.map((article) => (
+            <>
+              <p class="text-current/50 tabular-nums">{article.year}</p>
+              <div>
+                <p class="text-sm text-current/60">{article.authors}</p>
+                <p>{article.title}</p>
+                <p class="text-sm text-current/60">{article.details}</p>
+              </div>
+            </>
+          ))}
         </div>
       </div>
       <div>
         <h3 class="mb-4 text-xl font-semibold">Conference Poster</h3>
         <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-          {
-            conferencePosters.map((poster) => (
-              <>
-                <p class="text-current/50 tabular-nums">{poster.conference}</p>
-                <div>
-                  <p class="text-sm text-current/60">{poster.authors}</p>
-                  <p>{poster.title}</p>
-                </div>
-              </>
-            ))
-          }
+          {conferencePosters.map((poster) => (
+            <>
+              <p class="text-current/50 tabular-nums">{poster.conference}</p>
+              <div>
+                <p class="text-sm text-current/60">{poster.authors}</p>
+                <p>{poster.title}</p>
+              </div>
+            </>
+          ))}
         </div>
       </div>
     </div>
     <div class="space-y-8">
-      <h2
-        class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20"
-      >
+      <h2 class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20">
         Invited Talks
       </h2>
       <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-        {
-          invitedTalks.map((talk) => (
-            <>
-              <p class="text-current/50 tabular-nums">{talk.year}</p>
-              <div>
-                <p>{talk.title}</p>
-                <p class="text-sm text-current/60">{talk.location}</p>
-              </div>
-            </>
-          ))
-        }
+        {invitedTalks.map((talk) => (
+          <>
+            <p class="text-current/50 tabular-nums">{talk.year}</p>
+            <div>
+              <p>{talk.title}</p>
+              <p class="text-sm text-current/60">{talk.location}</p>
+            </div>
+          </>
+        ))}
       </div>
     </div>
     <div class="space-y-8">
-      <h2
-        class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20"
-      >
+      <h2 class="relative text-xl font-bold uppercase after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-full after:bg-blue-500/20">
         Awards & Funding
       </h2>
       <div class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-[200px_1fr]">
-        {
-          awardsAndFunding.map((award) => (
-            <>
-              <p class="text-current/50 tabular-nums">{award.year}</p>
-              <div>
-                <p>{award.title}</p>
-              </div>
-            </>
-          ))
-        }
+        {awardsAndFunding.map((award) => (
+          <>
+            <p class="text-current/50 tabular-nums">{award.year}</p>
+            <div>
+              <p>{award.title}</p>
+            </div>
+          </>
+        ))}
       </div>
     </div>
   </div>
